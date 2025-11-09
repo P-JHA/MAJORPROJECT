@@ -1,0 +1,47 @@
+<!-- Use the shared boilerplate layout for a consistent page design -->
+<%- layout("layouts/boilerplate") %>
+
+<!-- Main container with some top spacing -->
+<div class="container mt-5">
+
+  <!-- Page heading, centered using Bootstrap grid offset -->
+  <h1 class="col-6 offset-3">Log In</h1>
+
+  <!-- Center the login form horizontally -->
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+
+      <!-- Login form that sends user credentials to /login via POST -->
+      <form action="/login" method="POST" class="needs-validation" novalidate>
+
+        <!-- Username input field -->
+        <div class="mb-3">
+          <label for="username" class="form-label">Username</label>
+          <input 
+            type="text" 
+            class="form-control" 
+            id="username" 
+            name="username" 
+            required 
+          />
+        </div>
+
+        <!-- Password input field -->
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input 
+            type="password" 
+            class="form-control" 
+            id="password" 
+            name="password" 
+            required 
+          />
+        </div>
+
+        <!-- Submit button to log in the user -->
+        <button class="btn btn-success">Log In</button>
+      </form>
+
+    </div>
+  </div>
+</div>

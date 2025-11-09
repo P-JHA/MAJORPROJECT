@@ -1,0 +1,18 @@
+<!-- Use the main boilerplate layout for consistent page structure -->
+<%- layout("layouts/boilerplate") %>
+
+<!-- Create a Bootstrap row with top margin -->
+<div class="row mt-5">
+  
+  <!-- Centered Bootstrap alert box (6 columns wide, offset by 3 for centering) -->
+  <div class="alert alert-danger col-6 offset-3" role="alert">
+
+    <!-- Display the dynamic error message passed from the server -->
+    <h4 class="alert-heading"><%= message %></h4>
+
+    <hr>
+
+    <!-- Static message shown below the main error heading -->
+    <p class="mb-0">The page you're looking for was not found.</p>
+  </div>
+</div>

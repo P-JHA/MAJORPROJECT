@@ -1,0 +1,61 @@
+<!-- Use the shared boilerplate layout for consistent page styling -->
+<%- layout("layouts/boilerplate") %>
+
+<!-- Page container with top margin -->
+<div class="container mt-5">
+
+  <!-- Signup page heading, centered using Bootstrap grid offset -->
+  <h1 class="col-6 offset-3">Signup on wanderlust</h1>
+
+  <!-- Center the signup form horizontally -->
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      
+      <!-- Signup form: sends data to the /signup route via POST -->
+      <form action="/signup" method="POST" class="needs-validation" novalidate>
+        
+        <!-- Username field -->
+        <div class="mb-3">
+          <label for="username" class="form-label">Username</label>
+          <input 
+            type="text" 
+            class="form-control" 
+            id="username" 
+            name="username" 
+            required 
+          />
+          <!-- Feedback message shown when validation passes -->
+          <div class="valid-feedback">Looks Good!</div>
+        </div>
+
+        <!-- Email field -->
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input 
+            type="email" 
+            class="form-control" 
+            id="email" 
+            name="email" 
+            required 
+          />
+        </div>
+
+        <!-- Password field -->
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input 
+            type="password" 
+            class="form-control" 
+            id="password" 
+            name="password" 
+            required 
+          />
+        </div>
+
+        <!-- Submit button to create the new user account -->
+        <button class="btn btn-success">Sign Up</button>
+      </form>
+
+    </div>
+  </div>
+</div>
